@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<SelectDialog close="_onSelectEqfnr" confirm="_onSelectEqfnr" growingThreshold="10" id="idSelectEqfnr" items="{/wo_sh_eqfnrSet}"
+		liveChange="_onSelectEqfnrLiveChange" noDataText="No Data Found" title="No. KAI">
+		<items>
+			<StandardListItem title="{path:'Eqfnr' , formatter:'.formatter.EqfnrFloat'}"/>
+		</items>
+	</SelectDialog>
+</core:FragmentDefinition>

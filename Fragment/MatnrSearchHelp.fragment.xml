@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<SelectDialog close="_onSelectMatnr" confirm="_onSelectMatnr" growingThreshold="10" id="idSelectMatnr" items="{/wo_sh_matnrSet}"
+		liveChange="_onSelectMatnrLiveChange" noDataText="No Data Found" title="Material">
+		<items>  
+			<StandardListItem description="{Maktx}" info="{Meins}" title="{path:'Matnr' , formatter:'.formatter.MatnrFloat'}"/>
+		</items>
+	</SelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,34 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZPM_WO.controller.Page1">
+	<Page showFooter="true" showHeader="true" showNavButton="true" navButtonPress="_onNavButtonPress" title="Maintenance Order">
+		<content>
+			<VBox alignItems="Stretch" class="sapUiMediumMargin" direction="Column" displayInline="false" fitContainer="false" height="auto" justifyContent="Start" renderType="Div" visible="true" width="auto">
+				<items>
+					<Label design="Bold" required="true" text="Order No" textAlign="Begin" textDirection="Inherit" visible="true" width="100%"/>
+					<Input enabled="true" id="idInputOrder" maxLength="0" showValueHelp="true" type="Text" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequest" visible="true" width="auto"/>
+					<Text class="sapUiTinyMargin" id="idInputOrderText" text=""/>
+					<Text visible="true" class="sapUiTinyMargin" id="idStatusEdit" text=""/>
+					
+			        <Label design="Bold" required="true" text="No. KAI" textAlign="Begin" textDirection="Inherit" visible="true" width="100%"/>
+			        <Input enabled="true" id="idInputEqfnr" maxLength="0" showValueHelp="true" type="Text" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequestEqfnr" visible="true" width="auto"/>
+			        <Text class="sapUiTinyMargin" id="idInputEqfnrText" text=""/>
+			        
+			        <Label design="Bold" required="true" text="Planner Group" textAlign="Begin" textDirection="Inherit" visible="true" width="100%"/>
+			        <Input enabled="true" id="idInputIngrp" maxLength="0" showValueHelp="true" type="Text" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequestIngrp" visible="true" width="auto"/>
+			        <Text class="sapUiTinyMargin" id="idInputIngrpText" text=""/>
+				</items>
+				<layoutData/>
+			</VBox>
+		</content>
+		<footer>
+			<OverflowToolbar design="Auto" enabled="true" height="46px" visible="true" width="100%">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button enabled="true" iconDensityAware="false" iconFirst="true" press="_onExecute" text="Execute" type="Emphasized" visible="true" width="auto"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+		<subHeader/>
+		<customHeader/>
+	</Page>
+</mvc:View>

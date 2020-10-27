@@ -1,0 +1,98 @@
+{
+	"_version": "1.3.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "ZPM_WO",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"ZPM_WO_SRV": {
+				"uri": "/sap/opu/odata/sap/ZPM_WO_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"rootView": {
+			"viewName": "ZPM_WO.view.Main",
+			"type": "XML",
+			"id": "ZPM_WO"
+		},
+		"autoPrefixId": true,
+		"dependencies": {
+			"minUI5Version": "1.34",
+			"libs": {
+				"sap.m": {
+					"minVersion": "1.34.0"
+				},
+				"sap.me": {
+					"minVersion": ""
+				},
+				"sap.ui.commons": {
+					"minVersion": ""
+				},
+				"sap.ui.comp": {
+					"minVersion": ""
+				},
+				"sap.ui.core": {
+					"minVersion": "1.34.0"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.34.0"
+				},
+				"sap.ui.table": {
+					"minVersion": ""
+				},
+				"sap.uxap": {
+					"minVersion": ""
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ZPM_WO.i18n.i18n"
+				}
+			}
+		},
+		"ZPM_WO_SRV": {
+			"type": "sap.ui.model.odata.ODataModel",
+			"uri": "/sap/opu/odata/sap/ZPM_WO_SRV/"
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zpm_wo",
+		"_version": "1.1.0"
+	}
+}

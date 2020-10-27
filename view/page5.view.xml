@@ -1,0 +1,320 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZPM_WO.controller.page5">
+<Page xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" title="Maintenance Order" id="idpage4" showNavButton="true" navButtonPress="_onNavButtonPress">
+    <content>
+        <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" text="HEADER" width="100%" design="Bold"/>
+        <Table noDataText="No data" id="IdTableHeader" items="{/wo_hdrSet}" growingScrollToLoad="true" growingThreshold="5" growing="true">
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <ObjectIdentifier xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{Ktext}" titleActive="false" visible="true" title="{Aufnr}" titlePress="getWo"/>
+                        <Text text="{Auart}"/>
+                        <Text text="{Eqfnr}"/>
+                        <Text text="{MnWkCtr}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{Ilart}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{TotalCostsPlan}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{SysStatus}"/>
+                        </cells>
+                    
+                </ColumnListItem>
+                
+            </items>
+            <columns>
+                <Column id="__column0">
+                    <header>
+                        <Label text="Maintenance Order"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" id="__column0_copy" popinDisplay="Inline">
+                    <header>
+                        <Label text="Order Type"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column id="__column1" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="No. KAI"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column id="__column2" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Work Center"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" id="__column2_copy" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="PM.ActTyp"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" id="__column2_copy2" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Plan Cost"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" id="__column2_copy3" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Status"/>
+                        
+                    </header>
+                    
+                </Column>
+                </columns>
+            </Table>
+        <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" text="OPERATION" width="100%" design="Bold"/>
+        <Table xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" noDataText="No data" id="IdTableOperation" items="{/wo_oprSet}" growingScrollToLoad="true" growingThreshold="5" growing="true">
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <ObjectIdentifier xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{Description}" titleActive="false" visible="true" title="{Activity}" titlePress="getWo"/>
+                        <Text text="{WorkCntr}"/>
+                        </cells>
+                    
+                </ColumnListItem>
+                
+            </items>
+            <columns>
+                <Column>
+                    <header>
+                        <Label text="Operation"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline">
+                    <header>
+                        <Label text="Work Center"/>
+                        
+                    </header>
+                    
+                </Column>
+                </columns>
+            </Table>
+        <Label text="COMPONENT" width="100%" design="Bold"/>
+        <HBox width="100%" justifyContent="End" id="Toolbar_Comp">
+            <items>
+                <core:Icon src="sap-icon://add" size="2em" press="CompAdd" id="BtnAddComp"/>
+                <Text text=".   ."/>
+                <core:Icon src="sap-icon://edit" size="2em" press="CompEdit" id="BtnChgComp"/>
+                <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" text=".   ." id="__text19"/>
+                <core:Icon src="sap-icon://delete" size="2em" press="CompDelete" id="BtnDelComp"/>
+                <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" text=".   ." id="__text20"/>
+                <core:Icon xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns:core="sap.ui.core" src="sap-icon://save" size="2em" press="CompSave" id="BtnSavComp"/>
+            </items>
+        </HBox>
+        <Table xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" noDataText="No data" mode="MultiSelect" id="IdTableComponent" items="{/wo_compSet}" growingScrollToLoad="true" growingThreshold="5" growing="true">
+            <items><ColumnListItem>
+                    <cells>
+                        <ObjectIdentifier xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{MatlDesc}" titleActive="false" visible="true" title="{Material}" titlePress="getWo"/>
+                        <Text text="{RequirementQuantity}"/>
+                        <Text text="{RequirementQuantityUnit}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" text="{DeleteInd}" id="__text27"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" text="{ItemNumber}"/>
+                        <Text text="{Plant}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{StgeLoc}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{Batch}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{ItemCat}"/>
+                        </cells>
+                    
+                </ColumnListItem>
+                
+            </items>
+            <columns>
+                <Column>
+                    <header>
+                        <Label text="Material"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline">
+                    <header>
+                        <Label text="Req. Qty"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column popinDisplay="Inline">
+                    <header>
+                        <Label text="UoM"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" id="__column20">
+                    <header>
+                        <Label text="Delete" id="__label33"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Item"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Plant"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="SLoc"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Batch"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="ItemCat"/>
+                        
+                    </header>
+                    
+                </Column>
+                </columns>
+            </Table>
+        <Table xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" noDataText="No data" mode="MultiSelect" id="IdTableComponentFinal" items="{/TableComp}" growingScrollToLoad="true" growingThreshold="5" growing="true">
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <ObjectIdentifier xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{MatlDesc}" titleActive="false" visible="true" title="{Material}" titlePress="getWo"/>
+                        <Text text="{RequirementQuantity}"/>
+                        <Text text="{RequirementQuantityUnit}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" text="{DeleteInd}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" text="{ItemNumber}"/>
+                        <Text text="{Plant}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{StgeLoc}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{Batch}"/>
+                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{ItemCat}"/>
+                        </cells>
+                    
+                </ColumnListItem>
+                
+            </items>
+            <columns>
+                <Column>
+                    <header>
+                        <Label text="Material"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline">
+                    <header>
+                        <Label text="Req. Qty"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column popinDisplay="Inline">
+                    <header>
+                        <Label text="UoM"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m">
+                    <header>
+                        <Label text="Delete"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Item"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Plant"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="SLoc"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="Batch"/>
+                        
+                    </header>
+                    
+                </Column>
+                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                    <header>
+                        <Label text="ItemCat"/>
+                        
+                    </header>
+                    
+                </Column>
+                </columns>
+            </Table>
+        <HBox xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" width="100%" justifyContent="End" id="Toolbar_Add_Comp">
+            <items>
+                <core:Icon xmlns:core="sap.ui.core" src="sap-icon://accept" size="2em" press="Add_Comp_Submit"/>
+                <Text text=". ." id="__text22"/>
+                <core:Icon xmlns:core="sap.ui.core" src="sap-icon://decline" size="2em" press="Add_Comp_Cancel"/>
+                </items>
+            
+        </HBox>
+        <VBox xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" alignItems="Stretch" class="sapUiMediumMargin" direction="Column" displayInline="false" fitContainer="false" height="auto" justifyContent="Start" renderType="Div" visible="true" width="auto" id="Layout_Add_Comp">
+            <items>
+                <Label design="Bold" required="true" text="Item" textAlign="Begin" textDirection="Inherit" visible="true" width="100%" id="__label30"/>
+                <Text visible="true" class="sapUiTinyMargin" id="Comp_Item_Number" text=""/>
+                <Label design="Bold" required="true" text="Material No" textAlign="Begin" textDirection="Inherit" visible="true" width="100%" id="__label31"/>
+                <Input enabled="true" id="Comp_Material" maxLength="0" showValueHelp="true" type="Text" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequestMatnr" visible="true" width="auto"/>
+                <Text class="sapUiTinyMargin" id="Comp_Material_Text" text=""/>
+                <Label design="Bold" required="true" text="Quantity" textAlign="Begin" textDirection="Inherit" visible="true" width="100%" id="__label32"/>
+                <HBox width="100%" id="__hbox1">
+                    <items>
+                        <Input xmlns="sap.m" id="Comp_Qty" maxLength="0" type="Number" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequestIngrp" visible="true" width="auto"/>
+                        <Text xmlns="sap.m" class="sapUiTinyMargin" id="Comp_Meins" text=""/>
+                        </items>
+                    
+                </HBox>
+                <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" design="Bold" required="true" text="Item Category" textAlign="Begin" textDirection="Inherit" visible="true" width="100%"/>
+                <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" id="Comp_Item_Category" maxLength="0" type="Text" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequestIngrp" visible="true" width="auto"/>
+                <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" design="Bold" required="true" text="Plant" textAlign="Begin" textDirection="Inherit" visible="true" width="100%"/>
+                <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" enabled="true" id="Comp_Plant" maxLength="0" showValueHelp="true" type="Text" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequestWerks" visible="true" width="auto"/>
+                <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" class="sapUiTinyMargin" id="Comp_Plant_Text" text="" visible="false"/>
+                <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" design="Bold" required="true" text="Storage Location" textAlign="Begin" textDirection="Inherit" visible="true" width="100%"/>
+                <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" enabled="true" id="Comp_Item_Storage_location" maxLength="0" showValueHelp="true" type="Text" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequestLgort" visible="true" width="auto"/>
+                <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" class="sapUiTinyMargin" id="Comp_Item_Storage_location_Text" text="" visible="false"/>
+                <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" design="Bold" required="true" text="Batch" textAlign="Begin" textDirection="Inherit" visible="true" width="100%"/>
+                <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns="sap.m" enabled="true" id="Comp_Item_Batch" maxLength="0" showValueHelp="true" type="Text" valueHelpOnly="true" valueHelpRequest="_onInputValueHelpRequestCharg" visible="true" width="auto"/>
+                </items>
+            <layoutData/>
+            </VBox>
+        </content>
+    
+</Page>
+</mvc:View>

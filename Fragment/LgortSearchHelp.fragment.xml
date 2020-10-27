@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<SelectDialog close="_onSelectLgort" confirm="_onSelectLgort" growingThreshold="10" id="idSelectLgort" items="{/wo_sh_lgortSet}"
+		liveChange="_onSelectLgortLiveChange"  
+		noDataText="No Data Found" title="Storage Location">
+		<items>
+			<StandardListItem description="{Lgobe}" title="{path:'Lgort' , formatter:'.formatter.LgortFloat'}"/>
+		</items>
+	</SelectDialog>
+</core:FragmentDefinition>

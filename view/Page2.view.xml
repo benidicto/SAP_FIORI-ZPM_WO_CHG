@@ -1,0 +1,151 @@
+<mvc:View controllerName="ZPM_WO.controller.Page2" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap"
+	xmlns="sap.m">
+	<!--<semantic:DetailPage id="idPage2" navButtonPress="_onNavButtonPress" showFooter="false" showNavButton="true"-->
+	<!--title="Material List Maintenance Work Order">-->
+	<!--<semantic:content>-->
+	<Page id="idPage2" navButtonPress="_onNavButtonPress" showNavButton="true" title="Material List Maintenance Work Order">
+		<uxap:ObjectPageLayout class="sapUiSizeCompact" showEditHeaderButton="false" showFooter="false" showHeaderContent="true"
+			showTitleInHeaderContent="true" subSectionLayout="TitleOnTop">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader headerDesign="Light" id="idHDRObjectPage" isActionAreaAlwaysVisible="true" isObjectIconAlwaysVisible="false"
+					isObjectSubtitleAlwaysVisible="false" isObjectTitleAlwaysVisible="true" objectImageShape="Square" objectSubtitle="{Ktext}"
+					objectTitle="{path:'Aufnr' , formatter:'.formatter.AufnrFloat'}">
+					<uxap:actions>
+						<uxap:ObjectPageHeaderActionButton enabled="true" hideText="false" icon="sap-icon://save" iconDensityAware="false" press="_onButtonSave"
+							text="Save" tooltip="Save Requirement Qty." type="Emphasized" visible="true"/>
+					</uxap:actions>
+					<!--<uxap:breadCrumbsLinks/>-->
+					<!--<uxap:navigationBar/>-->
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:headerContent>
+				<Text id="idHDRSystemStatus" maxLines="1" text="System Status: {Sttxt}" textAlign="Begin" textDirection="Inherit" visible="true"
+					width="auto" wrapping="true"/>
+			</uxap:headerContent>
+			<uxap:sections>
+				<uxap:ObjectPageSection showTitle="true" title="Component" titleUppercase="true" visible="true">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection mode="Expanded" title="Components">
+							<uxap:blocks>
+								<Table class="sapUiSmallMarginTop" growing="true" growingScrollToLoad="true" growingThreshold="5" id="idTableComponent"
+									items="{/DETCOMP_ORDERSet}" mode="None" noDataText="No data" showSeparators="All" width="auto">
+									<!--items="{path:'/DETCOMP_ORDERSet', parameters: {batchGroupId: 'myDetcompSet'}}" mode="None" noDataText="No data" showSeparators="All" width="auto">-->
+									<infoToolbar>
+										<Toolbar design="Auto" enabled="true" height="auto" visible="false" width="100%">
+											<content>
+												<Label design="Standard" required="false" text="Label" textAlign="Begin" textDirection="Inherit" visible="true" width="100%"/>
+											</content>
+										</Toolbar>
+									</infoToolbar>
+									<headerToolbar>
+										<OverflowToolbar design="Transparent" enabled="true" height="auto" visible="true" width="auto">
+											<content>
+												<Title id="idTitleComponentTable" class="sapUiTinyMarginBottom" text="" textAlign="Begin" titleStyle="Auto" visible="true" width="auto" wrapping="false"/>
+												<ToolbarSpacer width=""/>
+												<Button activeIcon="true" class="sapUiTinyMarginBottom" icon="sap-icon://synchronize" id="idRefreshComponentTable"
+													press="_onPressRefreshTable" text="Refresh" type="Emphasized"></Button>
+												<!--<Button icon="sap-icon://synchronize" id="idRefreshComponentTable" press="_onPressRefreshTable"></Button>-->
+											</content>
+										</OverflowToolbar>
+									</headerToolbar>
+									<columns>
+										<Column demandPopin="true" hAlign="Left" mergeDuplicates="false" minScreenWidth="Desktop" popinDisplay="Inline" vAlign="Top" width="50px">
+											<header>
+												<Text maxLines="1" text="Item" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="true" hAlign="Left" mergeDuplicates="false" minScreenWidth="Desktop" popinDisplay="Inline" vAlign="Top" visible="false"
+											width="auto">
+											<header>
+												<Text maxLines="1" text="Item" textAlign="Begin" textDirection="Inherit" visible="false" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="false" hAlign="Left" mergeDuplicates="false" minScreenWidth="Desktop" popinDisplay="Inline" vAlign="Top"
+											visible="false" width="auto">
+											<header>
+												<Text maxLines="1" text="Item" textAlign="Begin" textDirection="Inherit" visible="false" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="false" hAlign="Left" mergeDuplicates="false" minScreenWidth="Phone" popinDisplay="Block" vAlign="Top" width="auto">
+											<header>
+												<Text maxLines="1" text="Components" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="true" hAlign="Center" mergeDuplicates="false" minScreenWidth="Phone" popinDisplay="Inline" vAlign="Top" width="auto">
+											<header>
+												<Text maxLines="1" text="Req. Qty" textAlign="Center" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="true" hAlign="Left" mergeDuplicates="false" minScreenWidth="Phone" popinDisplay="Inline" vAlign="Top" width="30px">
+											<header>
+												<Text maxLines="1" text="" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="true" hAlign="Left" mergeDuplicates="false" minScreenWidth="Desktop" popinDisplay="Inline" vAlign="Top" width="20px">
+											<header>
+												<Text maxLines="1" text="IC" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="true" hAlign="Left" mergeDuplicates="false" minScreenWidth="Desktop" popinDisplay="Inline" vAlign="Top" width="100px">
+											<header>
+												<Text maxLines="1" text="Special Stock" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="true" hAlign="Left" mergeDuplicates="false" minScreenWidth="Desktop" popinDisplay="Inline" vAlign="Top" width="40px">
+											<header>
+												<Text maxLines="1" text="SLoc" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="true" hAlign="Left" mergeDuplicates="false" minScreenWidth="Desktop" popinDisplay="Inline" vAlign="Top" width="40px">
+											<header>
+												<Text maxLines="1" text="Plant" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+										<Column demandPopin="true" hAlign="Left" mergeDuplicates="false" minScreenWidth="Desktop" popinDisplay="Inline" vAlign="Top" width="40px">
+											<header>
+												<Text maxLines="1" text="OpAC" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+											</header>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem type="Active">
+											<cells>
+												<Text maxLines="1" text="{Posnr}" textAlign="Begin" textDirection="Inherit" visible="true" width="auto" wrapping="false"/>
+												<Text maxLines="1" text="{Rspos}" textAlign="Begin" textDirection="Inherit" visible="false" width="auto" wrapping="false"/>
+												<Text maxLines="1" text="{Rsnum}" textAlign="Begin" textDirection="Inherit" visible="false" width="auto" wrapping="false"/>
+												<ObjectIdentifier text="{Matnr}" title="{Maktx}" titleActive="false" visible="true"/>
+												<HBox alignItems="Stretch" direction="Row" displayInline="true" fitContainer="false" height="auto" justifyContent="Start" renderType="Div"
+													visible="true" width="auto">
+													<Button icon="sap-icon://less" press="_onPressDecrease" type="Emphasized"/>
+													<HBox alignItems="Stretch" direction="Row" displayInline="true" fitContainer="false" height="auto" justifyContent="Start" renderType="Div"
+														visible="true" width="auto">
+														<items>
+															<Input change="_handleNullInput" maxLength="3" textAlign="Center" type="Tel" value="{path:'Bdmng' , formatter:'.formatter.BdmngFloat'}"></Input>
+														</items>
+														<layoutData/>
+													</HBox>
+													<Button icon="sap-icon://add" press="_onPressIncrease" type="Emphasized"/>
+												</HBox>
+												<ObjectNumber emphasized="true" number="{Meins}" state="None" unit=""/>
+												<ObjectNumber emphasized="true" number="{Postp}" state="None" unit=""/>
+												<ObjectNumber emphasized="true" number="{Sobkz}" state="None" unit=""/>
+												<ObjectNumber emphasized="true" number="{Lgort}" state="None" unit=""/>
+												<ObjectNumber emphasized="true" number="{Werks}" state="None" unit=""/>
+												<ObjectNumber emphasized="true" number="{Vornr}" state="None" unit=""/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</uxap:blocks>
+							<uxap:moreBlocks/>
+							<uxap:actions/>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+					<uxap:customAnchorBarButton/>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+		<!--</semantic:content>-->
+	</Page>
+	<!--</semantic:DetailPage>-->
+</mvc:View>

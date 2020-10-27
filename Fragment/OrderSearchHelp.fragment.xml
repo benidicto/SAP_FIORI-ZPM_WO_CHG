@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<SelectDialog close="_onSelectOrder" confirm="_onSelectOrder" growingThreshold="10" id="idSelectOrder" items="{/wo_sh_aufnrSet}"
+		liveChange="_onSelectOrderLiveChange" noDataText="No Data Found" title="Work Order">
+		<items>
+			<StandardListItem description="{Ktext}" info="{Auart}" infoState="None" title="{path:'Aufnr' , formatter:'.formatter.AufnrFloat'}"/>
+		</items>
+	</SelectDialog>
+</core:FragmentDefinition>

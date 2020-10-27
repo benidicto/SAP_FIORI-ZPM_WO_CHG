@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZPM_WO.controller.page3">
+<Page title="Maintenance Order" id="idpage3" showNavButton="true" navButtonPress="_onNavButtonPress">
+<content>
+    <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" text="HEADER" width="100%" design="Bold"/>
+    <Table noDataText="No data" id="IdTableHeader" items="{/wo_hdrSet}" growingScrollToLoad="true" growingThreshold="10" growing="true">
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <ObjectIdentifier xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{Ktext}" titleActive="true" visible="true" title="{Aufnr}" titlePress="getWoOpr"/>
+                    <Text text="{Auart}"/>
+                    <Text text="{Eqfnr}"/>
+                    <Text text="{MnWkCtr}"/>
+                    <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{Ilart}"/>
+                    <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{TotalCostsPlan}"/>
+                    <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="{SysStatus}"/></cells>
+            </ColumnListItem></items>
+        <columns> 
+            <Column>
+                <header>
+                    <Label text="Maintenance Order"/>
+                </header>
+            </Column>
+            <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline">
+                <header>
+                    <Label text="Order Type"/>
+                    
+                </header>
+                
+            </Column>
+            <Column popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                <header>
+                    <Label text="No. KAI"/>
+                </header>
+            </Column>
+            <Column popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                <header>
+                    <Label text="Work Center"/>
+                </header>
+            </Column>
+            <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                <header>
+                    <Label text="PM.ActTyp"/>
+                    
+                </header>
+                
+            </Column>
+            <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                <header>
+                    <Label text="Plan Cost"/>
+                    
+                </header>
+                
+            </Column>
+            <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" popinDisplay="Inline" demandPopin="true" minScreenWidth="Tablet">
+                <header>
+                    <Label text="Status"/>
+                    
+                </header>
+                
+            </Column></columns></Table>
+</content>
+</Page>
+</mvc:View>

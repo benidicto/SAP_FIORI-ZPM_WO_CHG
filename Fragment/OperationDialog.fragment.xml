@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+	<SelectDialog confirm="_onSelectOperation" growingThreshold="10" id="idSelectOperation" items="{/OPRTSH_VORNRSet}"
+		liveChange="_onSelectOprtLiveChange" multiSelect="false" noDataText="No Data Found" title="Operation">
+		<items>
+			<StandardListItem description="{Ltxa1}" info="{Arbei}" title="{Vornr}" type="Active"/>
+		</items>
+	</SelectDialog>
+</core:FragmentDefinition>

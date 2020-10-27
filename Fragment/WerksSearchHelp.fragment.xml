@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<SelectDialog close="_onSelectWerks" confirm="_onSelectWerks" growingThreshold="10" id="idSelectWerks" items="{/wo_sh_werksSet}"
+		liveChange="_onSelectWerksLiveChange" noDataText="No Data Found" title="Plant">
+		<items>  
+			<StandardListItem description="{Name1}" title="{path:'Werks' , formatter:'.formatter.WerksFloat'}"/>
+		</items>
+	</SelectDialog>
+</core:FragmentDefinition>

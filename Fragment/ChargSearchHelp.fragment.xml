@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<SelectDialog close="_onSelectCharg" confirm="_onSelectCharg" growingThreshold="10" id="idSelectCharg" items="{/wo_sh_chargSet}"
+		liveChange="_onSelectChargLiveChange" noDataText="No Data Found" title="Batch">
+		<items>  
+			<StandardListItem title="{path:'Charg' , formatter:'.formatter.ChargFloat'}"/>
+		</items>
+	</SelectDialog>
+</core:FragmentDefinition>
